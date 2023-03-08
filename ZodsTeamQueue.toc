@@ -1,0 +1,15 @@
+## Interface: 100005
+## Author: zooood
+## Title: Zods Team Queue
+## Version: v1.0
+## DefaultState: enabled
+## Dependencies:
+## OptionalDeps: WoWUnit
+## SavedVariables: ZodsTeamQueueDB
+
+util.lua
+init.lua
+slash_handler.lua
+ui.lua
+
+
