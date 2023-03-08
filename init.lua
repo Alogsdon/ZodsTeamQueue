@@ -17,8 +17,16 @@ function init.OnLoad(...)
 
     dump('we loaded')
     init.InitModules()
+    init.autoRun()
     init.loaded = true
 end
+
+function init.autoRun()
+    C_Timer.After(2, function()
+        AddonVars.modules.ui:Show()
+    end)
+end
+
 
 function init.OnEvent(_, event, ...)
     if event == "ADDON_LOADED" then

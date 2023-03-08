@@ -12,6 +12,6 @@ zods_widgets\index.xml
 util.lua
 init.lua
 slash_handler.lua
-ui.lua
+ui\index.xml
 
 
