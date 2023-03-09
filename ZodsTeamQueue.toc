@@ -7,11 +7,17 @@
 ## OptionalDeps: WoWUnit
 ## SavedVariables: ZodsTeamQueueDB
 
+
+util\index.xml
 zods_widgets\index.xml
 
-util.lua
 init.lua
 slash_handler.lua
+pvp_modes.lua
+current_activity.lua
+battlefield_info.lua
+role_check.lua
+pvp_queue.lua
 ui\index.xml
 
 

@@ -2,4 +2,5 @@
 ..\FrameXML\UI.xsd">
 	<Script file="registry.lua"/>
 	<Script file="window.lua"/>
+	<Script file="secure_button.lua"/>
 </Ui>

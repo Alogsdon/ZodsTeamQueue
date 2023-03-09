@@ -1,12 +1,13 @@
-
 local AddonName, AddonVars = ...
+local util = AddonVars.util
+local dump = util.dump
 local modules = AddonVars.modules
 
-_G["SLASH_" .. AddonName .. "1"] = '/zq'
+_G['SLASH_' .. AddonName .. '1'] = '/zq'
 
 
 SlashCmdList[AddonName] = function(msg)
-    DevTools_Dump('zods queue')
+    dump('zods queue')
     --if msg == 'clear' then
     --end
     modules.ui:Show()

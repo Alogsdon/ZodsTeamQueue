@@ -9,15 +9,13 @@ UI_INFO_MESSAGE -- arg 803
 PLAYER_ENTERING_WORLD
 PLAYER_ENTERING_BATTLEGROUND
 
-LFG_ROLE_CHECK_ROLE_CHOSEN
-local player, isTank, isHealer, isDamage = ...
-LFG_ROLE_CHECK_UPDATE
+
+
 both fire
 
-PVPReadyDialog:HookScript("OnShow", function() print('YOYOYO') end)
+PVPReadyDialog:HookScript('OnShow', function() print('YOYOYO') end)
 
-GetGameMessageInfo(803) => 'ERR_LFG_ROLE_CHECK_INITIATED'
-_G[GetGameMessageInfo(803)] => "A role check has been initiated...."
+
 ERR_LFG_CANT_USE_BATTLEGROUND = '
 '
 
@@ -25,10 +23,7 @@ ERR_LFG_CANT_USE_BATTLEGROUND = '
 
 /run for i=1,7 do DevTools_Dump(GetLFGMode(i)) end
 
-mode, submode = GetLFGMode(lELfgCategory, lfgID)
 
-
-local roleCheckInProgress, slots, members, roleUpdateCategory, roleUpdateID = GetLFGRoleUpdate()
 
 GetLFGRoleUpdateBattlegroundInfo()
 LFG_CATEGORY_NAMES = {
@@ -46,12 +41,12 @@ lELfgCategories = {
 }
 
 -- table assumbed global
-hooksecurefunc("PVPReadyDialog_Display", function()
+hooksecurefunc('PVPReadyDialog_Display', function()
         PlaySound(5980, 'Master')
 end)
 
 btw, other use is with a table
-hooksecurefunc(GameTooltip, "SetUnitAura", setAuraTooltipFunction)
+hooksecurefunc(GameTooltip, 'SetUnitAura', setAuraTooltipFunction)
 
 
 	local inProgress, _, _, _, _, isBattleground = GetLFGRoleUpdate();
@@ -62,9 +57,10 @@ hooksecurefunc(GameTooltip, "SetUnitAura", setAuraTooltipFunction)
 	for i=1, GetMaxBattlefieldID() do
 		local status, mapName, teamSize, registeredMatch = GetBattlefieldStatus(i);
         -- status {'queued', 'none', 'confirm'}
-		if ( status and status ~= "none" ) then
+		if ( status and status ~= 'none' ) then
 			QueueStatusDropDown_AddBattlefieldButtons(i);
 		end
 	end
 ]]
 
+--   GetLFGRoleUpdateBattlegroundInfo() while random BG is popped => 'Random Battleground'
